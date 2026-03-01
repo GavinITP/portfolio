@@ -5,6 +5,10 @@
   --font-display: "Roboto Condensed", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
