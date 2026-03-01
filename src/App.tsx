@@ -1,3 +1,4 @@
+import Education from "./sections/Education";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 
@@ -9,7 +10,7 @@ export default function App() {
       {/* hero */}
       <Hero />
       {/* education */}
-
+      <Education />
       {/* experience */}
       {/* projects */}
       {/* achievements */}

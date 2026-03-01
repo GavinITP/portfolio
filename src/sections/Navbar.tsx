@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="font-display text-3xl tracking-tight uppercase font-extrabold cursor-pointer text-white">
+          <div className="font-display text-3xl tracking-tight uppercase font-extrabold cursor-pointer text-white hover:text-purple-600 ">
             Ittipat Y
           </div>
 
@@ -26,7 +26,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              className="px-5 py-2 rounded-xl bg-white text-black hover:bg-gray-400 hover:cursor-pointer transition duration-300"
+              className="px-5 py-2 bg-white text-black hover:bg-purple-600 hover:text-white hover:cursor-pointer transition duration-300"
             >
               Contact
             </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="block w-full mt-3 px-5 py-2  rounded-xl bg-white text-black hover:bg-gray-800 transition text-center"
+            className="block w-full mt-3 px-5 py-2 bg-white text-black hover:bg-purple-500 transition text-center"
             onClick={() => setIsOpen(false)}
           >
             Contact

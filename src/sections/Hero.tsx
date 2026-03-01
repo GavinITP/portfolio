@@ -2,8 +2,7 @@ export default function Hero() {
   return (
     <section className="text-white min-h-[calc(100vh-64px)] flex flex-col justify-center items-center text-center px-6">
       <p className="mb-4 text-3xl">Hi, I am</p>
-
-      <h1 className="font-extrabold  text-5xl md:text-7xl uppercase tracking-tight">
+      <h1 className="font-extrabold text-5xl md:text-7xl uppercase tracking-tight bg-linear-to-b from-purple-400 via-purple-600 to-black bg-clip-text text-transparent">
         Ittipat Yodprasit
       </h1>
 
@@ -12,6 +11,8 @@ export default function Hero() {
         solutions across multiple industries, including finance, engineering,
         academia, and CRM platforms.
       </p>
+
+      <hr className="w-20" />
 
       <a
         href="#education"
