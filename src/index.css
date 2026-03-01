@@ -2,11 +2,6 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0077c0;
-  --color-accent: #c7eeff;
-  --color-bg: #000;
-  --color-text: #fafafa;
-
   --font-display: "Roboto Condensed", sans-serif;
 }
 
