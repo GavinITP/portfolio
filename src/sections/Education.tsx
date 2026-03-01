@@ -1,12 +1,12 @@
 export default function Education() {
   return (
-    <div className="mt-20" id="education">
+    <div className="mt-20 scroll-mt-16" id="education">
       <div>
         <h2 className="text-4xl my-3">Education</h2>
         <hr />
       </div>
 
-      <div className=" bg-black flex items-center justify-center px-4 my-10">
+      <div className=" bg-black flex items-center justify-center px-4 mt-10">
         <div className="max-w-2xl w-full border bg-black p-8 hover:cursor-pointer">
           <div className="flex items-center gap-10">
             <img
