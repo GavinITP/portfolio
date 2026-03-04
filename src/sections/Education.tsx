@@ -2,13 +2,13 @@ export default function Education() {
   return (
     <div className="mt-20 scroll-mt-16" id="education">
       <div>
-        <h2 className="text-4xl my-3">Education</h2>
+        <h2 className="text-4xl my-3 mx-3 md:mx-0">Education</h2>
         <hr />
       </div>
 
       <div className=" bg-black flex items-center justify-center px-4 mt-10">
         <div className="max-w-xl w-full border border-pink-500 bg-black p-8 hover:cursor-pointer transition-all duration-300 hover:shadow-[0_0_25px_rgba(236,72,153,0.7)]">
-          <div className="flex items-center gap-10">
+          <div className="flex flex-col md:flex-row items-center gap-10">
             <img
               src="chula-logo.png"
               alt="chulalongkorn university"
@@ -22,7 +22,7 @@ export default function Education() {
               <p className="text-lg  text-gray-300">
                 Bachelor of Engineering, B.Eng. (Computer Engineering)
               </p>
-              <div className="mt-6 flex justify-between text-base text-gray-300">
+              <div className="mt-6 flex flex-col md:flex-row gap-2 md:gap-0 justify-between text-base text-gray-300">
                 <div className="flex items-center mr-4 gap-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

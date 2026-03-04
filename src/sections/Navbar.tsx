@@ -2,11 +2,11 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const navLinks = ["Education", "Experience", "Achievements", "Projects"];
+  const navLinks = ["Education", "Experience", "Projects", "Achievements"];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md shadow-sm">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-3">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="font-display text-3xl tracking-tight uppercase font-extrabold cursor-pointer text-purple-400 ">

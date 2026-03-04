@@ -8,20 +8,13 @@ import Projects from "./sections/Projects";
 
 export default function App() {
   return (
-    <div className="container- mx-auto max-w-7xl font-display">
-      {/* navbar */}
+    <div className="mx-auto max-w-7xl font-display">
       <Navbar />
-      {/* hero */}
       <Hero />
-      {/* education */}
       <Education />
-      {/* experience */}
       <Experience />
-      {/* achievements */}
-      <Achievement />
-      {/* projects */}
       <Projects />
-      {/* contact */}
+      <Achievement />
       <Contact />
     </div>
   );

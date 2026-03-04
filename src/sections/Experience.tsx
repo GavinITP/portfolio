@@ -157,39 +157,43 @@ export default function Experience() {
   return (
     <div className="mt-20 scroll-mt-16" id="experience">
       <div>
-        <h2 className="text-4xl my-3">Experience</h2>
+        <h2 className="text-4xl my-3 mx-3 md:mx-0">Experience</h2>
         <hr />
       </div>
 
       <section className="relative w-full py-28">
         {/* Vertical Timeline Line */}
-        <div className="absolute left-12 top-0 h-full w-px bg-white"></div>
+        <div className="absolute left-4 md:left-12 top-0 h-full w-px bg-white"></div>
 
         <div className="space-y-28">
           {jobs.map((job, index) => {
             const CompanyIcon = companyIcons[job.companyKey];
 
             return (
-              <div key={index} className="relative pl-20 items-start">
+              <div key={index} className="relative pl-12 md:pl-20 items-start">
                 {/* Timeline Dot */}
-                <div className="absolute left-10 top-3 w-4 h-4 bg-purple-600 rounded-full border-4 border-black"></div>
+                <div className="absolute left-2 md:left-10 top-3 w-4 h-4 bg-purple-600 rounded-full border-4 border-black"></div>
 
                 {/* (Job Info) */}
                 <div className=" max-w-[80%]">
-                  <h3 className="text-4xl font-bold inline mr-4">{job.role}</h3>{" "}
-                  <span className="text-xl inline text-gray-500">
-                    {job.jobType}
-                  </span>
+                  <div className="flex flex-col md:flex-row md:gap-4 md:items-end">
+                    <h3 className="text-4xl font-bold inline">{job.role}</h3>
+                    <p className="text-xl inline text-gray-500">
+                      {job.jobType}
+                    </p>
+                  </div>
                   <div className="flex gap-3 mt-4 items-center">
                     {CompanyIcon && (
                       <CompanyIcon className="text-2xl text-purple-400" />
                     )}
 
-                    <p className="text-xl text-purple-400 font-medium">
-                      {job.company}
-                    </p>
+                    <div className="flex flex-col md:flex-row md:items-center md:gap-4">
+                      <p className="text-xl text-purple-400 font-medium">
+                        {job.company}
+                      </p>
 
-                    <p className="text-md text-gray-300">{job.period}</p>
+                      <p className="text-md text-gray-300">{job.period}</p>
+                    </div>
                   </div>
                   <ul className="mt-6 space-y-4 list-disc list-inside marker:text-white">
                     {job.description.map((bulletPoint, index) => (

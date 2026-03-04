@@ -66,7 +66,7 @@ export default function ContactCard() {
             <li className="flex items-center gap-4 group/item">
               <FaLinkedin className="text-purple-400 transition-transform duration-200 group-hover/item:scale-110" />
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://www.linkedin.com/in/ittipat-yodprasit"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-light hover:text-purple-400 transition-colors duration-200"
@@ -78,7 +78,7 @@ export default function ContactCard() {
             <li className="flex items-center gap-4 group/item">
               <FaGithub className="text-purple-400 transition-transform duration-200 group-hover/item:scale-110" />
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/GavinITP"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-light hover:text-purple-400 transition-colors duration-200"

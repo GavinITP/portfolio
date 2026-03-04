@@ -4,11 +4,13 @@ export default function Achievement() {
   return (
     <div className="mt-20 scroll-mt-16" id="achievements">
       <div>
-        <h2 className="text-4xl my-3">Achievements & Certificates</h2>
+        <h2 className="text-4xl my-3 mx-3 md:mx-0">
+          Achievements & Certificates
+        </h2>
         <hr />
       </div>
 
-      <div className="flex flex-col gap-6 bg-black p-6">
+      <div className="flex flex-col gap-6 bg-black px-3 mt-6">
         <ExpandableCard
           title={
             "1st Place in HighTech Sandbox 2023 Competition | Full-stack Developer (Hackathon Competitor)"

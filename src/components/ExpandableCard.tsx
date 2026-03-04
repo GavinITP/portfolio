@@ -5,7 +5,6 @@ type ExpandableCardProps = {
   title: string;
   year: string;
   description: string;
-  githubUrl?: string;
   imgSrc?: string[]; // optional array of image URLs
 };
 
@@ -13,7 +12,6 @@ export default function ExpandableCard({
   title,
   year,
   description,
-  githubUrl,
   imgSrc
 }: ExpandableCardProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +33,7 @@ export default function ExpandableCard({
     >
       <div className="flex items-center justify-between p-6">
         <div>
-          <div className="flex items-center gap-3 justify-between">
+          <div className="flex flex-col md:flex-row md:items-center gap-3 md:justify-between">
             <h2 className="text-2xl font-semibold text-white">{title}</h2>
             {year && (
               <span className="text-sm text-gray-500 font-medium">{year}</span>
@@ -45,11 +43,13 @@ export default function ExpandableCard({
             Click to {isOpen ? "collapse" : "expand"}
           </p>
         </div>
-        <FiChevronDown
-          className={`h-5 w-5 text-purple-400 transition-transform duration-300 ${
-            isOpen ? "rotate-180" : "rotate-0"
-          }`}
-        />
+        <div>
+          <FiChevronDown
+            className={`h-5 w-5 text-purple-400 transition-transform duration-300 ${
+              isOpen ? "rotate-180" : "rotate-0"
+            }`}
+          />
+        </div>
       </div>
 
       <div
@@ -75,22 +75,6 @@ export default function ExpandableCard({
                   />
                 ))}
               </div>
-            )}
-
-            {githubUrl && (
-              <a
-                href={githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="mt-6 inline-flex items-center gap-3 
-               border border-purple-600 px-4 py-2 
-               text-purple-400 transition-all duration-300
-               hover:bg-purple-600 hover:text-white 
-               hover:shadow-[0_0_20px_rgba(168,85,247,0.6)]"
-              >
-                <FiGithub className="h-5 w-5" />
-              </a>
             )}
           </div>
         </div>
