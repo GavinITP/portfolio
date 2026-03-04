@@ -1,3 +1,5 @@
+import ScrollDown from "../components/ScrollDown";
+
 export default function Hero() {
   return (
     <section className="relative text-white min-h-[calc(100vh-64px)] flex flex-col justify-center items-center text-center px-3">
@@ -17,10 +19,11 @@ export default function Hero() {
 
       <a
         href="#education"
-        className="absolute bottom-10 font-display px-6 py-3 border border-white transition duration-300 hover:bg-white hover:text-black hover:shadow-[0_0_20px_rgba(255,255,255,0.7)]"
+        className="absolute bottom-10 font-display px-6 bg-black py-3 border border-white transition duration-300 hover:bg-white hover:text-black hover:shadow-[0_0_20px_rgba(255,255,255,0.7)]"
       >
         View My Journey ↓
       </a>
+      <ScrollDown />
     </section>
   );
 }

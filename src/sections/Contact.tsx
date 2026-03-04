@@ -1,4 +1,5 @@
 import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import ScrollDown from "../components/ScrollDown";
 
 export default function ContactCard() {
   return (

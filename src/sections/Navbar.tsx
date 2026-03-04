@@ -9,7 +9,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-3">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="font-display text-3xl tracking-tight uppercase font-extrabold cursor-pointer text-purple-400 ">
+          <div className="font-display text-3xl tracking-tight uppercase font-extrabold cursor-pointer text-purple-600">
             Ittipat Y
           </div>
 
@@ -26,59 +26,73 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              className="px-5 py-2 bg-white text-black hover:bg-purple-600 hover:text-white hover:cursor-pointer transition duration-300"
+              className="px-5 py-2 bg-white text-black hover:bg-purple-600 hover:text-white transition duration-300"
             >
               Contact
             </a>
           </div>
 
-          {/* Mobile Hamburger */}
+          {/* Animated Hamburger */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex flex-col justify-between w-8 h-8"
+              className="relative w-8 h-8 flex flex-col justify-center items-center"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
+              <span
+                className={`absolute h-0.5 w-8 bg-white transform transition duration-300 ${
+                  isOpen ? "rotate-45" : "-translate-y-2"
+                }`}
+              />
+              <span
+                className={`absolute h-0.5 w-8 bg-white transition duration-300 ${
+                  isOpen ? "opacity-0" : "opacity-100"
+                }`}
+              />
+              <span
+                className={`absolute h-0.5 w-8 bg-white transform transition duration-300 ${
+                  isOpen ? "-rotate-45" : "translate-y-2"
+                }`}
+              />
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-black text-white backdrop-blur-md px-6 pb-4 h-screen">
-          {navLinks.map((link) => (
+      {/* Fixed Fullscreen Overlay (Height NEVER changes) */}
+      <div
+        className={`md:hidden fixed top-16 left-0 w-full h-screen bg-black text-white px-6 transition-all duration-500 ease-in-out ${
+          isOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-4 pointer-events-none"
+        }`}
+      >
+        <div className="flex flex-col mt-10 space-y-8">
+          {navLinks.map((link, index) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="block py-5 hover:text-gray-300"
               onClick={() => setIsOpen(false)}
+              className={`transform transition duration-500 ${
+                isOpen ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
               {link}
             </a>
           ))}
+
           <a
             href="#contact"
-            className="block w-full mt-3 px-5 py-2 bg-white text-black hover:bg-purple-500 transition text-center"
             onClick={() => setIsOpen(false)}
+            className={`mt-6 px-5 py-2 bg-white hover:bg-purple-600 hover:text-white text-black text-center transition duration-500 ${
+              isOpen ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+            }`}
+            style={{ transitionDelay: `${navLinks.length * 100}ms` }}
           >
             Contact
           </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
