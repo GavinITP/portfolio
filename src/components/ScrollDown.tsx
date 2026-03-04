@@ -2,7 +2,7 @@ export default function ScrollDown() {
   const h = 50;
 
   return (
-    <div className="absolute bottom-20 left-1/2 -translate-x-1/2">
+    <div className="">
       <a href="#next" className="flex flex-col items-center">
         <svg
           width="40"

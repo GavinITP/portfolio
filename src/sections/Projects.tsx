@@ -1,12 +1,19 @@
+import { motion } from "framer-motion";
 import BackgroundImageCard from "../components/BackgroundImageCard";
 
 export default function Projects() {
   return (
     <div className="mt-20 scroll-mt-16" id="projects">
-      <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-4xl my-3 mx-3 md:mx-0">Projects</h2>
         <hr />
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 px-3 md:px-20 gap-10 mt-12">
         <BackgroundImageCard

@@ -25,6 +25,7 @@ import {
 } from "react-icons/si";
 
 import { PiFileSqlFill } from "react-icons/pi";
+import { motion } from "framer-motion";
 
 export default function Experience() {
   const jobs = [
@@ -156,21 +157,41 @@ export default function Experience() {
 
   return (
     <div className="mt-20 scroll-mt-16" id="experience">
-      <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-4xl my-3 mx-3 md:mx-0">Experience</h2>
         <hr />
-      </div>
+      </motion.div>
 
       <section className="relative w-full py-28">
         {/* Vertical Timeline Line */}
-        <div className="absolute left-4 md:left-12 top-0 h-full w-px bg-white"></div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="absolute left-4 md:left-12 top-0 h-full w-px bg-white"
+        ></motion.div>
 
         <div className="space-y-28">
           {jobs.map((job, index) => {
             const CompanyIcon = companyIcons[job.companyKey];
 
             return (
-              <div key={index} className="relative pl-12 md:pl-20 items-start">
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.75 }}
+                viewport={{ once: true }}
+                key={index}
+                className="relative pl-12 md:pl-20 items-start"
+              >
                 {/* Timeline Dot */}
                 <div className="absolute left-2 md:left-10 top-3 w-4 h-4 bg-purple-600 rounded-full border-4 border-black"></div>
 
@@ -224,7 +245,7 @@ export default function Experience() {
                     );
                   })}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

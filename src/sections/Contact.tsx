@@ -1,38 +1,46 @@
 import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import ScrollDown from "../components/ScrollDown";
+import { motion } from "framer-motion";
 
 export default function ContactCard() {
   return (
-    <div
+    <motion.div
       id="contact"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.75 }}
+      viewport={{ once: true }}
       className="flex flex-col items-center justify-center my-20 px-4"
     >
       {/* Section Title */}
-      <h2 className="text-5xl font-extrabold mb-16 text-white">
+      <h2 className="text-5xl font-extrabold text-white mb-6">
         Let's Connect!
       </h2>
+
+      {/* Scroll Down Wrapper (prevents overlap) */}
+      <ScrollDown />
 
       {/* Glow Wrapper */}
       <div className="relative group w-full max-w-md">
         {/* Gradient Glow Background */}
         <div
           className="absolute -inset-0.5 bg-linear-to-r from-purple-900 to-indigo-900 
-                        rounded-2xl blur opacity-0 
-                        group-hover:opacity-70 transition duration-500"
+                     rounded-2xl blur opacity-0 
+                     group-hover:opacity-70 transition duration-500"
         ></div>
 
         {/* Card */}
         <div
           className="relative bg-white/5 backdrop-blur-xl 
-                        border border-white/10 
-                        rounded-2xl 
-                        shadow-2xl 
-                        p-8 
-                        text-slate-100 
-                        transition-all duration-500 
-                        group-hover:-translate-y-2 
-                        group-hover:shadow-purple-500/40 
-                        hover:border-purple-400/40"
+                     border border-white/10 
+                     rounded-2xl 
+                     shadow-2xl 
+                     p-8 
+                     text-slate-100 
+                     transition-all duration-500 
+                     group-hover:-translate-y-2 
+                     group-hover:shadow-purple-500/40 
+                     hover:border-purple-400/40"
         >
           {/* Header */}
           <div className="mb-8">
@@ -90,6 +98,6 @@ export default function ContactCard() {
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

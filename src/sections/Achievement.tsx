@@ -1,14 +1,21 @@
+import { motion } from "framer-motion";
 import ExpandableCard from "../components/ExpandableCard";
 
 export default function Achievement() {
   return (
     <div className="mt-20 scroll-mt-16" id="achievements">
-      <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-4xl my-3 mx-3 md:mx-0">
           Achievements & Certificates
         </h2>
         <hr />
-      </div>
+      </motion.div>
 
       <div className="flex flex-col gap-6 bg-black px-3 mt-6">
         <ExpandableCard

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { FiChevronDown, FiGithub } from "react-icons/fi";
 
@@ -25,11 +26,17 @@ export default function ExpandableCard({
   }, [isOpen, imgSrc]); // include imgSrc in case images change height
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.75 }}
+      viewport={{ once: true }}
       onClick={() => setIsOpen(!isOpen)}
-      className="w-full cursor-pointer border border-purple-600/70 bg-black text-white 
-      transition-all duration-300
-      hover:shadow-[0_0_28px_rgba(168,85,247,0.6)]"
+      className="w-full cursor-pointer
+    border border-purple-600/70
+    bg-black text-white
+    transition-shadow duration-300 ease-out
+    hover:shadow-[0_0_28px_rgba(168,85,247,0.6)]"
     >
       <div className="flex items-center justify-between p-6">
         <div>
@@ -79,6 +86,6 @@ export default function ExpandableCard({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

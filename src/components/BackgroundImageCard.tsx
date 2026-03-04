@@ -19,9 +19,11 @@ export default function BackgroundImageCard({
       href={projectUrl}
       target="_blank"
       rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      initial={{ opacity: 0, y: 40, scale: 0.98 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      whileHover={{ y: -6 }}
       className="relative w-80 h-96 rounded-xl overflow-hidden shadow-2xl group cursor-pointer block"
     >
       {/* Background Image */}

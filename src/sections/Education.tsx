@@ -1,12 +1,26 @@
+import { motion } from "framer-motion";
+
 export default function Education() {
   return (
     <div className="mt-20 scroll-mt-16" id="education">
-      <div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
         <h2 className="text-4xl my-3 mx-3 md:mx-0">Education</h2>
         <hr />
-      </div>
+      </motion.div>
 
-      <div className=" flex items-center justify-center px-4 mt-10">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className=" flex items-center justify-center px-4 mt-10"
+      >
         <div className="max-w-xl w-full border border-pink-500 bg-black p-8 hover:cursor-pointer transition-all duration-300 hover:shadow-[0_0_25px_rgba(236,72,153,0.7)]">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <img
@@ -66,7 +80,7 @@ export default function Education() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

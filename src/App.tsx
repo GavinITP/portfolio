@@ -12,7 +12,7 @@ export default function App() {
     <>
       <ParticlesBackground />
 
-      <div className="relative mx-auto max-w-7xl font-display">
+      <div id="top" className="relative mx-auto max-w-7xl font-display">
         <Navbar />
         <Hero />
         <Education />
