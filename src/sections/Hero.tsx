@@ -1,8 +1,9 @@
 export default function Hero() {
   return (
-    <section className="text-white min-h-[calc(100vh-64px)] flex flex-col justify-center items-center text-center px-3">
+    <section className="relative text-white min-h-[calc(100vh-64px)] flex flex-col justify-center items-center text-center px-3">
       <p className="mb-4 text-3xl">Hi, I am</p>
-      <h1 className="font-extrabold text-5xl md:text-7xl uppercase tracking-tight bg-linear-to-b from-purple-400 via-purple-600 to-black bg-clip-text text-transparent">
+
+      <h1 className="font-extrabold text-5xl md:text-7xl uppercase tracking-tight bg-linear-to-b from-purple-400 via-purple-600 to-purple-900 md:to-black bg-clip-text text-transparent">
         Ittipat Yodprasit
       </h1>
 
@@ -16,7 +17,7 @@ export default function Hero() {
 
       <a
         href="#education"
-        className="font-display absolute bottom-12 px-6 py-3 border border-white hover:bg-white hover:text-black transition duration-300"
+        className="absolute bottom-10 font-display px-6 py-3 border border-white transition duration-300 hover:bg-white hover:text-black hover:shadow-[0_0_20px_rgba(255,255,255,0.7)]"
       >
         View My Journey ↓
       </a>

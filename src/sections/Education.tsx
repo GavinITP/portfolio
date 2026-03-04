@@ -6,8 +6,8 @@ export default function Education() {
         <hr />
       </div>
 
-      <div className=" bg-black flex items-center justify-center px-4 mt-10">
-        <div className="max-w-xl w-full border border-pink-500 bg-black p-8 hover:cursor-pointer transition-all duration-300 hover:shadow-[0_0_25px_rgba(236,72,153,0.7)]">
+      <div className=" flex items-center justify-center px-4 mt-10">
+        <div className="max-w-xl w-full border border-pink-500 p-8 hover:cursor-pointer transition-all duration-300 hover:shadow-[0_0_25px_rgba(236,72,153,0.7)]">
           <div className="flex flex-col md:flex-row items-center gap-10">
             <img
               src="chula-logo.png"

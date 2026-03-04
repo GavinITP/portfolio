@@ -5,17 +5,22 @@ import Experience from "./sections/Experience";
 import Hero from "./sections/Hero";
 import Navbar from "./sections/Navbar";
 import Projects from "./sections/Projects";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 export default function App() {
   return (
-    <div className="mx-auto max-w-7xl font-display">
-      <Navbar />
-      <Hero />
-      <Education />
-      <Experience />
-      <Projects />
-      <Achievement />
-      <Contact />
-    </div>
+    <>
+      <ParticlesBackground />
+
+      <div className="relative mx-auto max-w-7xl font-display">
+        <Navbar />
+        <Hero />
+        <Education />
+        <Experience />
+        <Projects />
+        <Achievement />
+        <Contact />
+      </div>
+    </>
   );
 }
