@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
-import { FiChevronDown, FiGithub } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 
 type ExpandableCardProps = {
   title: string;

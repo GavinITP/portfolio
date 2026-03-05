@@ -26,6 +26,7 @@ import {
 
 import { PiFileSqlFill } from "react-icons/pi";
 import { motion } from "framer-motion";
+import type { IconType } from "react-icons";
 
 export default function Experience() {
   const jobs = [
@@ -118,7 +119,7 @@ export default function Experience() {
   ];
 
   // Tech icon mapping
-  const techIcons = {
+  const techIcons: Record<string, IconType> = {
     react: FaReact,
     "next.js": SiNextdotjs,
     vue: SiVuedotjs,
@@ -148,7 +149,7 @@ export default function Experience() {
   };
 
   // Company icon mapping
-  const companyIcons = {
+  const companyIcons: Record<string, IconType> = {
     quantium: FaBuilding,
     vulcorn: FaBuilding,
     primo: FaBuilding,
