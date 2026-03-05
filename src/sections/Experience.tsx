@@ -65,7 +65,7 @@ export default function Experience() {
     {
       company: "Chulalongkorn University",
       companyKey: "chula",
-      role: "Teacher Assistant",
+      role: "Teaching Assistant",
       jobType: "Part-Time, On-Site",
       period: "2024",
       description: [
