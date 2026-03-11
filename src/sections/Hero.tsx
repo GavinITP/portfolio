@@ -28,9 +28,10 @@ export default function Hero() {
         transition={{ duration: 1, delay: 2 }}
       >
         <p className="leading-6 my-10 text-lg max-w-3xl font-light text-gray-300">
-          Full-stack Developer with hands-on experience delivering real-world
-          solutions across multiple industries, including finance, engineering,
-          academia, and CRM platforms.
+          Collaborative Full-Stack Developer with 1+ years of experience
+          delivering real-world solutions across finance, engineering, and CRM
+          sectors. Specializing in building scalable backend architectures and
+          crafting polished, high-performance user interfaces.
         </p>
       </motion.div>
 
